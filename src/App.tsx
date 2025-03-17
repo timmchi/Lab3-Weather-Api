@@ -8,6 +8,7 @@ import {
 import { IonReactRouter } from "@ionic/react-router";
 import Home from "./pages/Home";
 import Menu from "./components/Menu";
+import Welcome from "./pages/Welcome";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -50,9 +51,7 @@ const App: React.FC = () => (
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route exact path="/">
-            <Redirect to="/home" />
-          </Route>
+          <Route exact path="/" component={Welcome} />
         </IonRouterOutlet>
       </IonSplitPane>
     </IonReactRouter>
